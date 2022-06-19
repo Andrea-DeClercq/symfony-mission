@@ -1,0 +1,23 @@
+{% extends 'home.html.twig' %}
+{% block title %}<title>{{question}}</title>{% endblock %}
+
+{% block body %}
+
+    <h1>{{ question }}!</h1>
+
+    <ul>
+        <li>Utilisateur {{ util }} </li>
+        <li>Date {{ date }}</li>
+    </ul>
+
+    <h1>Réponses</h1>
+    <p>Réponse du plus vieux au plus récente</p>
+    {%for rep in reponse %}
+    <h2>{{ rep.reponse }}</h2>
+    <ul>
+        <li>Utilisateur {{ rep.utilisateur }} </li>
+        <li>Date {{ rep.date|date('Y-m-d H:i:s') }}</li>
+    </ul>
+    {% endfor %}
+    <a href="/reponse/{{ idQuest }}/repondre" class="btn btn-primary btn-lg square" role="button">Répondre</a>
+{% endblock %}

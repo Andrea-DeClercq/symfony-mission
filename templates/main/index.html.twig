@@ -1,0 +1,17 @@
+{% extends 'home.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    <h1>Question posé</h1>
+    {%for question in show %}
+    <h2><a href="/reponse/{{question.id}}">{{ question.sujet }}</h2></a>
+    <ul>
+        <li>Utilisateur {{ question.Utilisateur }} </li>
+        <li>Date {{ question.Date|date('Y-m-d H:i:s') }}</li>
+        <li>Nombre de réponse(s) : {{ question.count }}</li>
+    </ul>
+    {% endfor %}
+
+{% endblock %}
