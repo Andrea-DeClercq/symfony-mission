@@ -19,7 +19,7 @@ class QuestionFormType extends AbstractType
         $builder
             ->add('Sujet')
             ->add('Utilisateur')
-            ->add('Date', DateTimeType::class, [
+            ->add('Date', DateTimeType::class, [            //To do: Setup date automatique
                 'placeholder' => [
                     'year' => 'Year', 'month' => 'Month', 'day' => 'Day','hour' =>'Hour','minute' =>'Minute'],
             ])

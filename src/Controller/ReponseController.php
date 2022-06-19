@@ -49,7 +49,7 @@ class ReponseController extends AbstractController
         $form = $this->createFormBuilder()
         ->add('reponse')
         ->add('utilisateur')
-        ->add('date',DateTimeType::class, [
+        ->add('date',DateTimeType::class, [             //To do: Setup date automatique
             'placeholder' => [
                 'year' => 'Year', 'month' => 'Month', 'day' => 'Day','hour' =>'Hour','minute' =>'Minute'],
         ])
